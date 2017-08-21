@@ -1,17 +1,6 @@
 #ifndef SYSTEM_H
 #define SYSTEM_H
 
-#include <stdio.h>
-
-#define SDL_MAIN_HANDLED
-#include <SDL2/SDL.h>
-
-#ifdef _WIN32
-#define GLEW_STATIC
-#include <GL/glew.h>
-#undef main
-#endif
-
 #define SYSTEM_WIDTH 1024
 #define SYSTEM_HEIGHT 768
 #define SYSTEM_TITLE "Virtual Machine"
@@ -85,10 +74,5 @@
 #define PUSH  18  // 1 register 
 #define FETCH 19  // 1 register
 #define WRITE 20  // 1 register
-
-namespace System
-{
-	int execute(const char* file);
-}
 
 #endif /* SYSTEM_H */

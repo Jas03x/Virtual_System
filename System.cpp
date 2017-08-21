@@ -1,3 +1,14 @@
+#include <stdio.h>
+
+#define SDL_MAIN_HANDLED
+#include <SDL2/SDL.h>
+
+#ifdef _WIN32
+#define GLEW_STATIC
+#include <GL/glew.h>
+#undef main
+#endif
+
 #include "System.h"
 
 // private System data:
